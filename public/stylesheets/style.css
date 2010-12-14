@@ -410,8 +410,8 @@ html, body {
 
 /* line 55, ../../app/stylesheets/partials/_page.scss */
 .monster {
-  width: 80px;
-  height: 120px;
+  width: 87px;
+  height: 130px;
   background: url("../images/monster.png") no-repeat;
 }
 
