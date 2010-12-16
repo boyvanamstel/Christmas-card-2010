@@ -2,7 +2,6 @@
  * @author Boy van Amstel / http://www.boyvanamstel.nl
  */
 
-/*
 Snow.prototype = new Char();
 Snow.prototype.constructor = Snow;
 function Snow(constainer, class) {
@@ -37,4 +36,3 @@ Snow.prototype.checkAlive = function() {
 			Engine.removeDelegate(this, this.checkAlive);
 		}
 }
-*/

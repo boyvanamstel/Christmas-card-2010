@@ -16,7 +16,7 @@ var Char = function(container, class) {
 	_element.style.left = '0px';
 	document.getElementById(container).appendChild(_element);
 	this.getElement = function() { return _element; }
-
+/*
 	var _x = 0;
 	this.setX = function(x) {
 		_x = x || 0;
@@ -41,11 +41,30 @@ var Char = function(container, class) {
 	this.setYVelocity = function(yVelocity) {
 		_yVelocity = yVelocity;
 	}
-	this.getYVelocity = function() { return _yVelocity; }
+	this.getYVelocity = function() { return _yVelocity; }*/
 
 }; Char.id = 0;
 
 Char.prototype.constructor = Char;
+
+Char.prototype.setX = function() {
+	this.x = x || 0;
+	this.element.style.left = this.x + 'px';
+}
+Char.prototype.getX = function() {
+	this.y = y || 0;
+	this.element.style.top = this.y + 'px';
+}
+
+Char.prototype.setY = function() {}
+Char.prototype.getY = function() {}
+
+Char.prototype.setXVelocity = function() {}
+Char.prototype.getXVelocity = function() {}
+
+Char.prototype.setYVelocity = function() {}
+Char.prototype.getYVelocity = function() {}
+
 
 Char.prototype.move = function() {
 		var element = this.getElement();	
