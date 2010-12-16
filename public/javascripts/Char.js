@@ -60,8 +60,8 @@ Char.prototype.move = function() {
 		w = window.innerWidth || document.body.clientWidth;
 		h = window.innerHeight || document.body.clientHeight;
 
-		if(element.offsetLeft + element.offsetWidth > w) this.setX(0);
-		if(element.offsetLeft + element.offsetWidth < 0) this.setX(w - element.offsetWidth);
+		if(element.offsetLeft + element.offsetWidth > (w + element.offsetWidth)) this.setX(0 - element.offsetWidth - 1);
+		if(element.offsetLeft + element.offsetWidth < (0 - element.offsetWidth)) this.setX(w);
 
 		//if(element.offsetTop + element.offsetHeight > h) this.setY(0);	
 		//if(element.offsetTop + element.offsetWidth < 0) this.setY(h - element.offsetHeight);

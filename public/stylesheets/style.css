@@ -390,33 +390,47 @@ html, body {
   overflow: hidden;
 }
 
+/* line 43, ../../app/stylesheets/partials/_page.scss */
+body {
+  background: url("../images/bg.png") repeat-x 50% 100%;
+}
+
 /* line 51, ../../app/stylesheets/partials/_page.scss */
+#message {
+  width: 960px;
+  height: 250px;
+  margin: 50px auto;
+  background: url("../images/message.png") no-repeat 100% 0;
+  display: none;
+}
+
+/* line 59, ../../app/stylesheets/partials/_page.scss */
 .char {
   position: absolute;
 }
 
-/* line 53, ../../app/stylesheets/partials/_page.scss */
+/* line 61, ../../app/stylesheets/partials/_page.scss */
 .boy {
   width: 110px;
   height: 300px;
   background: url("../images/boy.png") no-repeat;
 }
 
-/* line 54, ../../app/stylesheets/partials/_page.scss */
+/* line 62, ../../app/stylesheets/partials/_page.scss */
 .auk {
   width: 98px;
   height: 300px;
   background: url("../images/auk.png") no-repeat;
 }
 
-/* line 55, ../../app/stylesheets/partials/_page.scss */
+/* line 63, ../../app/stylesheets/partials/_page.scss */
 .monster {
   width: 87px;
   height: 130px;
   background: url("../images/monster.png") no-repeat;
 }
 
-/* line 56, ../../app/stylesheets/partials/_page.scss */
+/* line 64, ../../app/stylesheets/partials/_page.scss */
 .vanesh {
   width: 107px;
   height: 100px;

@@ -1,6 +1,6 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
-(function() {
+(function($) {
 
 	var chars = new Array();
 	
@@ -12,7 +12,7 @@
 		char.setXVelocity(Math.floor(Math.random() *10) - 5);
 		char.setYVelocity(0);
 		char.setX((w /2) + (char.getElement().offsetWidth /2));
-		char.setY(h - char.getElement().offsetHeight);
+		char.setY(h - char.getElement().offsetHeight - 50);
 		Engine.addDelegate(char, char.move);	
 		Engine.addDelegate(char, char.checkAlive);	
 		
@@ -25,6 +25,8 @@
 		var monster = addChar('monster');
 		var vanesh = addChar('vanesh');
 		chars = [auk, boy, monster, vanesh];
+		
+		$('#message').fadeIn(3000);
 	}
 
 	function onResize() {
@@ -33,7 +35,7 @@
 		
 		for(var i = 0; i < chars.length; i++) {
 			var char = chars[i];
-			char.setY(h - char.getElement().offsetHeight);
+			char.setY(h - char.getElement().offsetHeight - 50);
 		}
 	}
 
@@ -52,4 +54,4 @@
 
 	Engine.start();
 
-})();
+})(jQuery);
