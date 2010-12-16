@@ -38,7 +38,7 @@ input:invalid, textarea:invalid {
 
 $blue: #183d60;
 
-html, body { height: 100%; background: $blue; }
+html, body { height: 100%; background: $blue; overflow: hidden; }
 
 body {}
 

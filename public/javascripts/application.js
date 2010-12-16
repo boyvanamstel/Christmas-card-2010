@@ -28,8 +28,6 @@
 	}
 
 	function onResize() {
-	
-		console.log('test');
 		w = window.innerWidth || document.body.clientWidth;
 		h = window.innerHeight || document.body.clientHeight;
 		

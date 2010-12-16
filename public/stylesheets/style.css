@@ -387,6 +387,7 @@ input:invalid, textarea:invalid {
 html, body {
   height: 100%;
   background: #183d60;
+  overflow: hidden;
 }
 
 /* line 51, ../../app/stylesheets/partials/_page.scss */
