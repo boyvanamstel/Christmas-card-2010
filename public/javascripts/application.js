@@ -14,7 +14,6 @@
 		char.setX((w /2) + (char.getElement().offsetWidth /2));
 		char.setY(h - char.getElement().offsetHeight - 50);
 		Engine.addDelegate(char, char.move);	
-		Engine.addDelegate(char, char.checkAlive);	
 		
 		return char;
 	}
@@ -25,6 +24,15 @@
 		var monster = addChar('monster');
 		var vanesh = addChar('vanesh');
 		chars = [auk, boy, monster, vanesh];
+		
+		for(var i = 0; i < 50; i++) {
+			var snow = new Snow('main');
+			snow.setXVelocity(Math.floor(Math.random() * 1) + 1);
+			snow.setYVelocity(-Math.floor(Math.random() * 1) + 3);
+			snow.setX(Math.floor(Math.random() * w));
+			snow.setY(snow.getElement().offsetHeight - Math.floor(Math.random() * 1000));
+			Engine.addDelegate(snow, snow.move);	
+		}
 		
 		$('#message').fadeIn(3000);
 	}
