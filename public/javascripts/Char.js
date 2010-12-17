@@ -2,10 +2,10 @@
  * @author Boy van Amstel / http://www.boyvanamstel.nl
  */
 
-function Char(container, class) {
+function Char(container, name) {
 	this.id = Char.id++;
 	this.container = container;
-	this.class = class;
+	this.name = name;
 	
 	if(this.id && this.container) this.setup();	
 }; Char.id = 0;
@@ -17,7 +17,7 @@ Char.prototype.setup = function() {
 	this.element.setAttribute('id', 'char'+this.id);
 	
 	var elemClass = 'char';
-	if(this.class) elemClass = elemClass + ' ' + this.class;
+	if(this.name) elemClass = elemClass + ' ' + this.name;
 	this.element.setAttribute('class', elemClass);
 	
 	this.element.style.left = '0px';

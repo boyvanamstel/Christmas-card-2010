@@ -6,10 +6,10 @@ Snow.prototype = new Char;
 
 Snow.prototype.constructor = Snow;
 
-function Snow(container, class) {
+function Snow(container, name) {
 	this.id = Char.id++;
 	this.container = container;
-	this.class = class;
+	this.name = name;
 	
 	if(this.id && this.container) this.setup();
 }; Snow.id = 0;
@@ -19,7 +19,7 @@ Snow.prototype.setup = function() {
 	this.element.setAttribute('id', 'snow'+this.id);
 	
 	var elemClass = 'snow';
-	if(this.class) elemClass = elemClass + ' ' + this.class;
+	if(this.name) elemClass = elemClass + ' ' + this.name;
 	this.element.setAttribute('class', elemClass);
 	
 	this.element.style.left = '0px';
