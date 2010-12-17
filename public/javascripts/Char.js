@@ -2,7 +2,7 @@
  * @author Boy van Amstel / http://www.boyvanamstel.nl
  */
 
-var Char = function(container, class) {
+function Char(container, class) {
 	this.id = Char.id++;
 	this.container = container;
 	this.class = class;
