@@ -57,8 +57,8 @@ Char.prototype.move = function() {
 		var xVelocity = this.getXVelocity();
 		var yVelocity = this.getYVelocity();
 
-		this.setX(x + xVelocity + Math.floor((Math.random() * xVelocity) - (xVelocity /2)));
-		this.setY(y + yVelocity + Math.floor((Math.random() * yVelocity) - (yVelocity /2)));
+		this.setX(x + xVelocity);
+		this.setY(y + yVelocity);
 		
 		w = window.innerWidth || document.body.clientWidth;
 		h = window.innerHeight || document.body.clientHeight;
