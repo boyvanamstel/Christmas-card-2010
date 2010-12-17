@@ -409,28 +409,36 @@ body {
   position: absolute;
 }
 
-/* line 61, ../../app/stylesheets/partials/_page.scss */
+/* line 60, ../../app/stylesheets/partials/_page.scss */
+.snow {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #fff;
+}
+
+/* line 62, ../../app/stylesheets/partials/_page.scss */
 .boy {
   width: 110px;
   height: 300px;
   background: url("../images/boy.png") no-repeat;
 }
 
-/* line 62, ../../app/stylesheets/partials/_page.scss */
+/* line 63, ../../app/stylesheets/partials/_page.scss */
 .auk {
   width: 98px;
   height: 300px;
   background: url("../images/auk.png") no-repeat;
 }
 
-/* line 63, ../../app/stylesheets/partials/_page.scss */
+/* line 64, ../../app/stylesheets/partials/_page.scss */
 .monster {
   width: 87px;
   height: 130px;
   background: url("../images/monster.png") no-repeat;
 }
 
-/* line 64, ../../app/stylesheets/partials/_page.scss */
+/* line 65, ../../app/stylesheets/partials/_page.scss */
 .vanesh {
   width: 107px;
   height: 100px;

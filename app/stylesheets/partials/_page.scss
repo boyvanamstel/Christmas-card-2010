@@ -57,6 +57,7 @@ header {}
 	}
 	
 	.char { position: absolute; }
+	.snow { position: absolute; width: 5px; height: 5px; background: #fff; }
 	
 	.boy { width: 110px; height: 300px; background: url('../images/boy.png') no-repeat; }
 	.auk { width: 98px; height: 300px; background: url('../images/auk.png') no-repeat; }
