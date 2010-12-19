@@ -460,17 +460,24 @@ body {
   border-image: url(../images/textballoon.png) 24 39 39 39 round;
 }
 
-/* line 83, ../../app/stylesheets/partials/_page.scss */
+/* line 82, ../../app/stylesheets/partials/_page.scss */
+.no-borderimage .balloon {
+  background: url("../images/textballoon-ie.png") 0 100% no-repeat;
+  border: 0;
+  padding: 20px 20px 35px 20px;
+}
+
+/* line 88, ../../app/stylesheets/partials/_page.scss */
 .monster .balloon {
   bottom: 140px;
 }
 
-/* line 84, ../../app/stylesheets/partials/_page.scss */
+/* line 89, ../../app/stylesheets/partials/_page.scss */
 .vanesh .balloon {
   bottom: 110px;
 }
 
-/* line 85, ../../app/stylesheets/partials/_page.scss */
+/* line 90, ../../app/stylesheets/partials/_page.scss */
 .boy .balloon, .auk .balloon {
   bottom: 310px;
 }

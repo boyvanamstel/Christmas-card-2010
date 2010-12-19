@@ -79,6 +79,11 @@ header {}
 		-webkit-border-image: url(../images/textballoon.png) 24 39 39 39 round;
 		border-image: url(../images/textballoon.png) 24 39 39 39 round;
 	}
+	.no-borderimage .balloon { 
+		background: url('../images/textballoon-ie.png') 0 100% no-repeat; 
+		border: 0; 
+		padding: 20px 20px 35px 20px;
+	}
 
 	.monster .balloon { bottom: 140px; }
 	.vanesh .balloon { bottom: 110px; }

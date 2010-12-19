@@ -22,8 +22,10 @@
 	var h = window.innerHeight || document.body.clientHeight;
 
 	var xPosModifier = 0;
-	var snowAmount = 30;
 
+	var snowAmount = 60;
+	if($.browser.msie) snowAmount = 30;
+	
 	function setCharPosition(char, i) {
 		char.setY(h - char.getElement().offsetHeight - 50);
 		char.setX((w / 5) * (i + 1) - (char.getElement().offsetWidth / 2))
