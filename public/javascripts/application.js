@@ -22,7 +22,7 @@
 	var h = window.innerHeight || document.body.clientHeight;
 
 	var xPosModifier = 0;
-	var snowAmount = 50;
+	var snowAmount = 30;
 
 	function setCharPosition(char, i) {
 		char.setY(h - char.getElement().offsetHeight - 50);
@@ -34,7 +34,7 @@
 		char.setXVelocity(0);
 		char.setYVelocity(0);
 		setCharPosition(char, xPosModifier++);
-		Engine.addDelegate(char, char.move);	
+		//Engine.addDelegate(char, char.move);	
 		
 		return char;
 	}
