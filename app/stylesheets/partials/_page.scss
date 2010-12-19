@@ -40,7 +40,13 @@ $blue: #183d60;
 
 html, body { height: 100%; background: $blue; overflow: hidden; }
 
-body { background: url('../images/bg.png') repeat-x 50% 100%; }
+body { 
+	font-family: Courier;
+	font-size: 14px;
+	font-weight: bold;
+	background: url('../images/bg.png') repeat-x 50% 100%; 
+}
+
 
 #container {}
 
@@ -56,12 +62,28 @@ header {}
 		display: none; 
 	}
 	
-	.char { position: absolute; }
+	.char, .snow { position: absolute; }
 	.snow { position: absolute; width: 5px; height: 5px; background: #fff; }
 	
 	.boy { width: 110px; height: 300px; background: url('../images/boy.png') no-repeat; }
 	.auk { width: 98px; height: 300px; background: url('../images/auk.png') no-repeat; }
 	.monster { width: 87px; height: 130px; background: url('../images/monster.png') no-repeat; }
 	.vanesh { width: 107px; height: 100px; background: url('../images/vanesh.png') no-repeat; }
+
+	.balloon { 
+		width: 180px; 
+		height: 80px;
+		padding: 10px;
+		position:relative; 
+		top: -120px; 
+		left: -100px;
+		text-align: center;
+		/*-moz-border-image: ('../images/textballoon.png') 27 27 27 27 round round ;
+		*/
+border-width: 0px 27px 26px;
+-moz-border-image: url('../images/textballoon.png') 0 27 26 round;
+-webkit-border-image: url('../images/textballoon.png') 0 27 26 round;
+border-image: url('../images/textballoon.png') 0 27 26 round;
+	}
 
 footer {}

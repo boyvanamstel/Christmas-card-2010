@@ -3,35 +3,58 @@
 (function($) {
 
 	var chars = new Array();
-	
+
 	var w = window.innerWidth || document.body.clientWidth;
 	var h = window.innerHeight || document.body.clientHeight;
 
+	var xPosModifier = 0;
+	var snowAmount = 50;
+
+	function setCharPosition(char, i) {
+		char.setY(h - char.getElement().offsetHeight - 50);
+		char.setX((w / 5) * (i + 1) - (char.getElement().offsetWidth / 2))
+	}
+
 	function addChar(name) {
 		var char = new Char('main', name);
-		char.setXVelocity(Math.floor(Math.random() *10) - 5);
+		char.setXVelocity(0);
 		char.setYVelocity(0);
-		char.setX((w /2) + (char.getElement().offsetWidth /2));
-		char.setY(h - char.getElement().offsetHeight - 50);
+		setCharPosition(char, xPosModifier++);
 		Engine.addDelegate(char, char.move);	
 		
 		return char;
 	}
 
-	function init() {
-		var auk = addChar('auk');
-		var boy = addChar('boy');
-		var monster = addChar('monster');
-		var vanesh = addChar('vanesh');
-		chars = [auk, boy, monster, vanesh];
+	function addSnow() {
+		var snow = new Snow('main');
+		snow.setXVelocity(Math.floor(Math.random() * 1) + 1);
+		snow.setYVelocity(-Math.floor(Math.random() * 1) + 3);
+		snow.setX(Math.floor(Math.random() * w));
+		snow.setY(snow.getElement().offsetHeight - Math.floor(Math.random() * 1000));
+		Engine.addDelegate(snow, snow.move);	
+	}
+
+	function talk(name, text) {
+		var char = chars[name];
+		var element = char.getElement();
 		
-		for(var i = 0; i < 50; i++) {
-			var snow = new Snow('main');
-			snow.setXVelocity(Math.floor(Math.random() * 1) + 1);
-			snow.setYVelocity(-Math.floor(Math.random() * 1) + 3);
-			snow.setX(Math.floor(Math.random() * w));
-			snow.setY(snow.getElement().offsetHeight - Math.floor(Math.random() * 1000));
-			Engine.addDelegate(snow, snow.move);	
+		var balloon = document.createElement('div');
+		balloon.setAttribute('class', 'balloon');
+		balloon.innerHTML = 'MIAUW!';
+
+		$(balloon).appendTo(element);
+		$(balloon).effect('bounce', { times: 2 }, 200);
+
+	}
+
+	function init() {
+		chars['auk'] = addChar('auk');
+		chars['boy'] = addChar('boy');
+		chars['monster'] = addChar('monster');
+		chars['vanesh'] = addChar('vanesh');
+		
+		for(var i = 0; i < snowAmount; i++) {
+			addSnow();
 		}
 		
 		$('#message').fadeIn(3000);
@@ -40,10 +63,10 @@
 	function onResize() {
 		w = window.innerWidth || document.body.clientWidth;
 		h = window.innerHeight || document.body.clientHeight;
-		
-		for(var i = 0; i < chars.length; i++) {
-			var char = chars[i];
-			char.setY(h - char.getElement().offsetHeight - 50);
+	
+		var i = 0;
+		for(var key in chars) {
+			setCharPosition(chars[key], i++);
 		}
 	}
 
@@ -56,6 +79,7 @@
 		switch(e.keyCode) {
 			case(77):
 				//addChars();
+				talk('monster');
 			break;
 		}
 	}
