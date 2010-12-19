@@ -393,12 +393,12 @@ html, body {
 /* line 43, ../../app/stylesheets/partials/_page.scss */
 body {
   font-family: Courier;
-  font-size: 14px;
+  font-size: 24px;
   font-weight: bold;
   background: url("../images/bg.png") repeat-x 50% 100%;
 }
 
-/* line 57, ../../app/stylesheets/partials/_page.scss */
+/* line 56, ../../app/stylesheets/partials/_page.scss */
 #message {
   width: 960px;
   height: 250px;
@@ -407,12 +407,12 @@ body {
   display: none;
 }
 
-/* line 65, ../../app/stylesheets/partials/_page.scss */
+/* line 64, ../../app/stylesheets/partials/_page.scss */
 .char, .snow {
   position: absolute;
 }
 
-/* line 66, ../../app/stylesheets/partials/_page.scss */
+/* line 65, ../../app/stylesheets/partials/_page.scss */
 .snow {
   position: absolute;
   width: 5px;
@@ -420,47 +420,57 @@ body {
   background: #fff;
 }
 
-/* line 68, ../../app/stylesheets/partials/_page.scss */
+/* line 67, ../../app/stylesheets/partials/_page.scss */
 .boy {
   width: 110px;
   height: 300px;
   background: url("../images/boy.png") no-repeat;
 }
 
-/* line 69, ../../app/stylesheets/partials/_page.scss */
+/* line 68, ../../app/stylesheets/partials/_page.scss */
 .auk {
   width: 98px;
   height: 300px;
   background: url("../images/auk.png") no-repeat;
 }
 
-/* line 70, ../../app/stylesheets/partials/_page.scss */
+/* line 69, ../../app/stylesheets/partials/_page.scss */
 .monster {
   width: 87px;
   height: 130px;
   background: url("../images/monster.png") no-repeat;
 }
 
-/* line 71, ../../app/stylesheets/partials/_page.scss */
+/* line 70, ../../app/stylesheets/partials/_page.scss */
 .vanesh {
   width: 107px;
   height: 100px;
   background: url("../images/vanesh.png") no-repeat;
 }
 
-/* line 73, ../../app/stylesheets/partials/_page.scss */
+/* line 72, ../../app/stylesheets/partials/_page.scss */
 .balloon {
-  width: 180px;
-  height: 80px;
-  padding: 10px;
-  position: relative;
-  top: -120px;
-  left: -100px;
+  width: 150px;
+  position: absolute;
+  left: 20px;
   text-align: center;
-  /*-moz-border-image: ('../images/textballoon.png') 27 27 27 27 round round ;
-  */
-  border-width: 0px 27px 26px;
-  -moz-border-image: url("../images/textballoon.png") 0 27 26 round;
-  -webkit-border-image: url("../images/textballoon.png") 0 27 26 round;
-  border-image: url("../images/textballoon.png") 0 27 26 round;
+  border-width: 32px 39px 39px 39px;
+  -moz-border-image: url(../images/textballoon.png) 32 39 39 39 round;
+  -webkit-border-image: url(../images/textballoon.png) 32 39 39 39 round;
+  border-image: url(../images/textballoon.png) 32 39 39 39 round;
+}
+
+/* line 83, ../../app/stylesheets/partials/_page.scss */
+.monster .balloon {
+  bottom: 140px;
+}
+
+/* line 84, ../../app/stylesheets/partials/_page.scss */
+.vanesh .balloon {
+  bottom: 110px;
+}
+
+/* line 85, ../../app/stylesheets/partials/_page.scss */
+.boy .balloon, .auk .balloon {
+  bottom: 310px;
 }

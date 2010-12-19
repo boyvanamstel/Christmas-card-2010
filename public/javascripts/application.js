@@ -4,6 +4,20 @@
 
 	var chars = new Array();
 
+	var catText = [
+		'Prrr!', 
+		'Miauw!', 
+		'Mieuw!', 
+		'Mew!'
+		];
+	var peopleText = [
+		'Gelukkig nieuwjaar!', 
+		'Happy New Year!',
+		'Fijne feestdagen!',
+		'Merry Christmas!'
+		];
+	var textInterval = setInterval(randomTalk, 5000);
+
 	var w = window.innerWidth || document.body.clientWidth;
 	var h = window.innerHeight || document.body.clientHeight;
 
@@ -34,22 +48,47 @@
 		Engine.addDelegate(snow, snow.move);	
 	}
 
+	function randomTalk() {
+		var names = new Array();
+		for(var k in chars) names.push(k);
+		var random = Math.floor(Math.random() * names.length);
+		switch(names[random]) {
+			case 'boy':
+			case 'auk':
+				peopleTalk(names[random]);
+			break;
+			default:
+				catTalk(names[random]);
+			break;
+		}
+	}
+	function catTalk(name) {
+		talk(name, catText[Math.floor(Math.random() * catText.length)]);
+	}
+	function peopleTalk(name) {
+		talk(name, peopleText[Math.floor(Math.random() * peopleText.length)]);
+	}
+
 	function talk(name, text) {
 		var char = chars[name];
 		var element = char.getElement();
 		
+		if($(element).find('.balloon').length > 0) return;
+
+
 		var balloon = document.createElement('div');
 		balloon.setAttribute('class', 'balloon');
-		balloon.innerHTML = 'MIAUW!';
+		balloon.innerHTML = text;
 
 		$(balloon).appendTo(element);
-		$(balloon).effect('bounce', { times: 2 }, 200);
-
+		$(balloon).effect('bounce', { times: 2 }, 300).delay(2000).queue(function() {
+			$(this).remove();
+		});
 	}
 
 	function init() {
-		chars['auk'] = addChar('auk');
 		chars['boy'] = addChar('boy');
+		chars['auk'] = addChar('auk');
 		chars['monster'] = addChar('monster');
 		chars['vanesh'] = addChar('vanesh');
 		
@@ -77,9 +116,17 @@
 	document.onkeyup = function(e) {
 		e = e || window.event;
 		switch(e.keyCode) {
+			case(65):
+				peopleTalk('auk');
+			break;
+			case(66):
+				peopleTalk('boy');
+			break;
 			case(77):
-				//addChars();
-				talk('monster');
+				catTalk('monster');
+			break;
+			case(86):
+				catTalk('vanesh');
 			break;
 		}
 	}

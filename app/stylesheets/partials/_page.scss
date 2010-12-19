@@ -42,11 +42,10 @@ html, body { height: 100%; background: $blue; overflow: hidden; }
 
 body { 
 	font-family: Courier;
-	font-size: 14px;
+	font-size: 24px;
 	font-weight: bold;
 	background: url('../images/bg.png') repeat-x 50% 100%; 
 }
-
 
 #container {}
 
@@ -71,19 +70,18 @@ header {}
 	.vanesh { width: 107px; height: 100px; background: url('../images/vanesh.png') no-repeat; }
 
 	.balloon { 
-		width: 180px; 
-		height: 80px;
-		padding: 10px;
-		position:relative; 
-		top: -120px; 
-		left: -100px;
+		width: 150px; 
+		position: absolute;
+		left: 20px;
 		text-align: center;
-		/*-moz-border-image: ('../images/textballoon.png') 27 27 27 27 round round ;
-		*/
-border-width: 0px 27px 26px;
--moz-border-image: url('../images/textballoon.png') 0 27 26 round;
--webkit-border-image: url('../images/textballoon.png') 0 27 26 round;
-border-image: url('../images/textballoon.png') 0 27 26 round;
+		border-width: 32px 39px 39px 39px;
+		-moz-border-image: url(../images/textballoon.png) 32 39 39 39 round;
+		-webkit-border-image: url(../images/textballoon.png) 32 39 39 39 round;
+		border-image: url(../images/textballoon.png) 32 39 39 39 round;
 	}
+
+	.monster .balloon { bottom: 140px; }
+	.vanesh .balloon { bottom: 110px; }
+	.boy .balloon, .auk .balloon { bottom: 310px; }
 
 footer {}
