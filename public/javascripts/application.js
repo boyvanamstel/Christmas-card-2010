@@ -16,7 +16,6 @@
 		'Fijne feestdagen!',
 		'Merry Christmas!'
 		];
-	var textInterval = setInterval(randomTalk, 5000);
 
 	var w = window.innerWidth || document.body.clientWidth;
 	var h = window.innerHeight || document.body.clientHeight;
@@ -64,6 +63,7 @@
 			break;
 		}
 	}
+
 	function catTalk(name) {
 		talk(name, catText[Math.floor(Math.random() * catText.length)]);
 	}
@@ -99,6 +99,9 @@
 		}
 		
 		$('#message').fadeIn(3000);
+
+		var textInterval = setInterval(randomTalk, 5000);
+		randomTalk();
 	}
 
 	function onResize() {
