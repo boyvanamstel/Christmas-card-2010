@@ -3,9 +3,10 @@
  */
 
 var Engine = {
-	start: function() {
+	start: function(interval) {
 		if(!Engine.interval) {
-			Engine.interval = window.setInterval(Engine.tick, 10);
+			var i = interval != null ? interval : 50;
+			Engine.interval = window.setInterval(Engine.tick, i);
 		}
 	},
 	stop: function() {

@@ -43,7 +43,7 @@
 	function addSnow() {
 		var snow = new Snow('main');
 		snow.setXVelocity(Math.floor(Math.random() * 1) + 1);
-		snow.setYVelocity(-Math.floor(Math.random() * 1) + 3);
+		snow.setYVelocity(-Math.floor(Math.random() * 1) + 5);
 		snow.setX(Math.floor(Math.random() * w));
 		snow.setY(snow.getElement().offsetHeight - Math.floor(Math.random() * 1000));
 		Engine.addDelegate(snow, snow.move);	
